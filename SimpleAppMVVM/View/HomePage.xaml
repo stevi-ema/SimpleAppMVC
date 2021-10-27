@@ -1,0 +1,19 @@
+﻿<!-- Copyright : Stevi Ema Wijayanti -->
+<Page x:Class="SimpleAppMVVM.View.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimpleAppMVVM.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="HomePage">
+
+    <!-- Copyright : Stevi Ema Wijayanti -->
+    <StackPanel>
+        <Label Content="Selamat datang" FontSize="20" FontWeight="Bold" Foreground="#FF4B4BFD"/>
+        <Label Content="Ini adalah contoh aplikasi dengan menggunakan WPF" Foreground="#FF5C5CFF" />
+        <Label Content="Dalam aplikasi terdapat beberapa contoh program" Foreground="#FF5C5CFF" />
+    </StackPanel>
+</Page>
+<!-- Copyright : Stevi Ema Wijayanti -->

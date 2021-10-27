@@ -1,0 +1,41 @@
+﻿<!-- Copyright : Stevi Ema Wijayanti -->
+<Page x:Class="SimpleAppMVVM.View.PembayaranSppPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimpleAppMVVM.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="315"
+      Title="PembayaranSppPage">
+
+    <!-- Copyright : Stevi Ema Wijayanti -->
+    <StackPanel Margin="0,0,0,10" Width="310">
+        <Label Content="Pembayaran SPP" FontSize="18" FontWeight="Bold" Foreground="#FF4B4BFD"/>
+        <Label Content="UNIVERSITAS AMIKOM YOGYAKARTA" FontSize="12" Foreground="#FF5C5CFF"/>
+        <Label Content="NPM" FontSize="12" Foreground="#FF5C5CFF" Margin="0,30,0,0" />
+        <TextBox x:Name="txtNpm" FontSize="12" Foreground="#FF5C5CFF" Height="23" />
+        <Label Content="Nama" FontSize="12" Foreground="#FF5C5CFF" />
+        <TextBox x:Name="txtNama" FontSize="12" Foreground="#FF5C5CFF" Height="23" />
+        <Label Content="Program Studi" FontSize="12" Foreground="#FF5C5CFF" />
+        <!-- Copyright : Stevi Ema Wijayanti -->
+        <ComboBox x:Name="cmbProdi" FontSize="12" Foreground="#FF5C5CFF" Height="23" >
+            <ComboBoxItem Content="D3 Teknik Informatika"/>
+            <ComboBoxItem Content="D3 Manajemen Informasi"/>
+            <ComboBoxItem Content="S1 Informatika"/>
+            <ComboBoxItem Content="S1 Sistem Informasi"/>
+            <ComboBoxItem Content="S1 Akuntansi"/>
+            <ComboBoxItem Content="S1 Arsitektur"/>
+            <ComboBoxItem Content="S1 Ekonomi"/>
+            <ComboBoxItem Content="S1 Geografi"/>
+            <ComboBoxItem Content="S1 Hubungan Internasional"/>
+        </ComboBox>
+        <!-- Copyright : Stevi Ema Wijayanti -->
+        <Label Content="Jumlah SKS" FontSize="12" Foreground="#FF5C5CFF" />
+        <TextBox x:Name="txtSks" FontSize="12" Foreground="#FF5C5CFF" Height="23" />
+        <Button x:Name="btnBayar" Content="Bayar" Height="23" Width="110" Margin="0,10,0,0" Background="#FF4B4BFD" BorderBrush="#FF4B4BFD" Foreground="White" FontWeight="Bold" Click="btnBayar_Click"/>
+        <Label Content="Total Pembayaran" FontSize="12" Foreground="#FF5C5CFF" Margin="0,15,0,0" HorizontalAlignment="Center" />
+        <Label x:Name="lblBayar" Content="Rp 1000000,-" FontSize="25" Foreground="#FF5C5CFF" FontWeight="Bold" HorizontalAlignment="Center"/>
+    </StackPanel>
+</Page>
+<!-- Copyright : Stevi Ema Wijayanti -->
