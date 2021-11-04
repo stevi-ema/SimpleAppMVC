@@ -75,6 +75,11 @@ namespace SimpleAppMVVM.View
             lObj.Show();
             this.Close();
         }
+
+        private void lblExit_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }
 /// Copyright : Stevi Ema Wijayanti

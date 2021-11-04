@@ -6,7 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleAppMVVM.View"
         mc:Ignorable="d"
-        Title="HomeWindow" Height="600" Width="400">
+        Title="HomeWindow" Height="600" Width="400"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -70,6 +72,10 @@
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Height="50">
                     <Label x:Name="lblLogOut" Style="{DynamicResource MenuLabel}" Width="140" Content="Log Out" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" MouseDown="lblLogOut_MouseDown" />
+                    <Image Source="../Image/Icons/logout_icon.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="14,10,10,10" />
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Height="50">
+                    <Label x:Name="lblExit" Style="{DynamicResource MenuLabel}" Width="140" Content="Exit" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" MouseDown="lblExit_MouseDown" />
                     <Image Source="../Image/Icons/logout_icon.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="14,10,10,10" />
                 </DockPanel>
             </StackPanel>
