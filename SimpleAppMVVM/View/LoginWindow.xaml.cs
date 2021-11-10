@@ -39,29 +39,14 @@ namespace SimpleAppMVVM.View
         // Copyright : Stevi Ema Wijayanti
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            //instance -> create object
-            Model.Login login = new Model.Login();
-
-            //input
-            login.username = txtUsername.Text;
-            login.password = txtPassword.Password;
-
-            //output
-            bool hasil = login.CheckLogin();
-            if (hasil)
+            //instance
+            Controller.LoginController login = new Controller.LoginController(this);
+            //response
+            login.ValidasiLogin();
+            if (login.pesan != "")
             {
-                HomeWindow home = new HomeWindow();
-                home.Show();
-                this.Close();
+                MessageBox.Show(login.pesan);
             }
-            else
-            {
-                MessageBox.Show("Username/password salah!");
-                txtUsername.Text = "";
-                txtPassword.Password = "";
-                txtUsername.Focus();
-            }
-            
         }
 
         private void txtUsername_GotFocus(object sender, RoutedEventArgs e)

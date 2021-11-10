@@ -21,55 +21,33 @@ namespace SimpleAppMVVM.View
     public partial class KalkulatorPage : Page
     {
         //declare object global
-        Model.Kalkulator kalkulator;
+        Controller.KalkulatorController kalkulator;
 
         public KalkulatorPage()
         {
             InitializeComponent();
             //instance -> create object
-            kalkulator = new Model.Kalkulator();
-        }
-
-        void InputData()
-        {
-            kalkulator.nilai1 = Double.Parse(txtNilai1.Text);
-            kalkulator.nilai2 = Double.Parse(txtNilai2.Text);
+            kalkulator = new Controller.KalkulatorController(this);
         }
 
         private void btnTambah_Click(object sender, RoutedEventArgs e)
         {
-            //input
-            InputData();
-
-            //output
-            lblHasil.Content = kalkulator.Tambah();
+            kalkulator.Penjumlahan();
         }
 
         private void btnKurang_Click(object sender, RoutedEventArgs e)
         {
-            //input
-            InputData();
-
-            //output
-            lblHasil.Content = kalkulator.Kurang();
+            kalkulator.Pengurangan();
         }
 
         private void btnKali_Click(object sender, RoutedEventArgs e)
         {
-            //input
-            InputData();
-
-            //output
-            lblHasil.Content = kalkulator.Kali();
+            kalkulator.Perkalian();
         }
 
         private void btnBagi_Click(object sender, RoutedEventArgs e)
         {
-            //input
-            InputData();
-
-            //output
-            lblHasil.Content = kalkulator.Bagi();
+            kalkulator.Pembagian();
         }
 
         private void btnReset_Click(object sender, RoutedEventArgs e)

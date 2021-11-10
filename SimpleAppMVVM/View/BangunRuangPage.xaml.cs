@@ -48,29 +48,25 @@ namespace SimpleAppMVVM.View
         private void btnHitung_Click(object sender, RoutedEventArgs e)
         {
             //instance -> create object
-            Model.BangunRuang bangunRuang = new Model.BangunRuang();
+            Controller.BangunRuangController bangunRuang = new 
+                Controller.BangunRuangController(this)
             
-            //input
-            bangunRuang.x = Double.Parse(txtSisi1.Text);
-            bangunRuang.y = Double.Parse(txtSisi2.Text);
-            bangunRuang.z = Double.Parse(txtSisi3.Text);
-
             //output
             if(rdbBalok.IsChecked == true)
             {
-                lblHasil.Content = bangunRuang.Balok();
+                bangunRuang.VolumeBalok();
             }
             else if(rdbTabung.IsChecked == true)
             {
-                lblHasil.Content = bangunRuang.Tabung();
+                //lblHasil.Content = bangunRuang.Tabung();
             }
             else if (rdbPrismaSegitiga.IsChecked == true)
             {
-                lblHasil.Content = bangunRuang.PrismaSegitiga();
+                //lblHasil.Content = bangunRuang.PrismaSegitiga();
             }
             else
             {
-                lblHasil.Content = bangunRuang.Kerucut();
+                //lblHasil.Content = bangunRuang.Kerucut();
             }
         }
     }

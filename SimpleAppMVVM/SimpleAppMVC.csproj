@@ -61,6 +61,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controller\BangunRuangController.cs" />
+    <Compile Include="Controller\KalkulatorController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Model\BangunRuang.cs" />
     <Compile Include="Model\Kalkulator.cs" />
     <Compile Include="Model\Login.cs" />
@@ -118,9 +121,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Image\Icons\home.png" />
     <Resource Include="Image\Icons\hotel_icon.png" />
